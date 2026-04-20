@@ -1,0 +1,42 @@
+<html>
+
+  <head>
+    <title> Form elemanları </title>
+
+  </head>
+
+   <body bgcolor="#00ffff">
+
+ bilgi doldurulan alanlardan oluşan bütüne FORM denir
+<br>Elemanlarına FORM ELEMANLARI denir.
+<br> <img src="logo.png" width="100"/>
+<br>
+<br>
+<form>
+  Kullanıcı adı : <input id="username" name="username" type="text"></input><br>
+  Şifre         : <input id="pass" name="pass" type="password"></input><br>
+  Açıklama satır: <textarea rows="6" cols="20">Merhaba açıklama</textarea><br>
+
+  <div id="GenelBilgi" style="colr:blue; background-color: orange">
+
+  Ehliyet ?     : <input type="checkbox"/><br>
+  Cinsiyet      : E<input name="cins" type="radio"/>
+                  K<input name="cins" type="radio"/><br> 
+
+  Eğitim durumu : <select>
+                      <option>Seçiniz...</option>
+                      <option>Üniversite</option>
+                      <option>Lise</option>
+                      <option>İlkokul</option>
+                  </select>
+  </div>
+        
+  <br> <input type="file" id="myFile"/> 
+  <br> <input type="submit" id="btnKaydet" value="KAYDET" />
+</form>
+
+ <br> Şu an <span style="color:red">FORM elemanlarını</span> gördük
+
+   </body>
+
+</html>
