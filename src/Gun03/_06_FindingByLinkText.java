@@ -15,6 +15,7 @@ public class _06_FindingByLinkText {
         WebElement siparislerimLinki=driver.findElement(By.linkText("Siparişlerim"));
         System.out.println("siparislerimLinki.getText() = " + siparislerimLinki.getText());
 
+        //partialLinkText
         WebElement link2=driver.findElement(By.partialLinkText("Süper Fiyat"));
         System.out.println("link2.getText() = " + link2.getText());
 
