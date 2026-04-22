@@ -2,14 +2,16 @@ package Gun04;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.junit.Test;
 
-public class _02_Soru_V2 extends BaseDriver {
+public class _02_Soru_V3 extends BaseDriver {
 
-    public static void main(String[] args) {
-        //DriverBaslat();
-
+    @Test
+    public void Test1()
+    {
         driver.get("https://form.jotform.com/221934510376353");
 
         WebElement isimKutusu=driver.findElement(By.id("first_8"));
@@ -25,15 +27,10 @@ public class _02_Soru_V2 extends BaseDriver {
 
         WebElement tesekkurYazisi = driver.findElement(By.className("thankyou-main-text"));
 
-        if (tesekkurYazisi.getText().contains("Thank"))
-            System.out.println("TEST Passed");
-        else
-            System.out.println("TEST Fail");
+        Assert.assertTrue("Aranılan mesaj bulunmadı", tesekkurYazisi.getText().contains("Thank") );
+        //Ben true bekliyorum, değilse göster, yoksa test passed
 
         BekleKapat();
     }
-
-
-
 
 }
