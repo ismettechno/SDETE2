@@ -1,20 +1,15 @@
 package Gun04;
 
+import Utility.BaseDriver;
 import Utility.MyFunc;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-public class _02_Soru {
-    // Senaryo:
-    // 1-  https://form.jotform.com/221934510376353  sayfasınız açınız
-    // 2-  isim kutucuğuna adınızı yazdırınız
-    // 3-  soyad kutucuğuna soyadınız yazdırınız
-    // 4-  Submit butona tıklatınız (click)
-    // 5-  "Thank You" yazısını görünüyor ise "TEST PASSED" yazdırınız
+public class _02_Soru_V2 extends BaseDriver {
+
     public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
+        //DriverBaslat();
+
         driver.get("https://form.jotform.com/221934510376353");
 
         WebElement isimKutusu=driver.findElement(By.id("first_8"));
@@ -35,7 +30,11 @@ public class _02_Soru {
         else
             System.out.println("TEST Fail");
 
-        MyFunc.Bekle(5);
-        driver.quit();
+
+        BekleKapat();
     }
+
+
+
+
 }
