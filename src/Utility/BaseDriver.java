@@ -12,6 +12,7 @@ public class BaseDriver {
     // ilk burası çalışır extend olduğu yerde
     static
     {
+        KalanOncekileriKapat();
         driver = new ChromeDriver();
 
         driver.manage().window().maximize(); // Ekranı max yapıyor.
@@ -23,6 +24,14 @@ public class BaseDriver {
     {
         MyFunc.Bekle(3);
         driver.quit();
+    }
+
+    // hafızada kalmış, Selenium açtığı boştaki tarayıcıları temizler
+    public static void KalanOncekileriKapat() {
+        try {
+            Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
+        } catch (Exception ignored) {
+        }
     }
 
 }
