@@ -16,9 +16,9 @@ public class _07_FindingElements_tag {
         // bütün a ile başlayan web elementlerini istiyoruz
         List<WebElement> linkler=driver.findElements(By.tagName("a"));
 
-        for(WebElement e: linkler)
+        for(WebElement e: linkler) // linklerdeki her bir elemanı e adıyla aşağı gönder
             if (!e.getText().equals("")) // ekranda gözükmeyenleri istemiyouz
-            System.out.println(e.getText());
+               System.out.println(e.getText());
 
         MyFunc.Bekle(5);
         driver.quit();
