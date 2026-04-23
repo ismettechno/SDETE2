@@ -1,0 +1,25 @@
+Css Selector
+div[class='form_label'][for='last8']
+
+> : çocuklarda arama yapar
+  : tüm çocuklarda(sülale) de arama yapar
++ : bitişik kardeşe gider
+~ : bütün kardeşlerde arama yapar
+
+
+<div id="form"> -> parent
+
+    <span> merhaba 1 </span>            -> çocuk
+    <span> merhaba 2 </span>            -> çocuk  -> çocuklarda ara
+
+    <div>                               -> çocuk
+       <img src=logo.png>               -> torun  -> sülalede ara
+       <input type="text">              -> torun  -> sülalede ara
+    </div>
+
+</div>
+
+[id='form'] > :nth-child(3)   -> içerdeki div elemntini veriyor
+         çocuklarından 3.çocuk
+
+[id='form'] img  -> tüm sülaledeki img
