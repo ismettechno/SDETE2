@@ -4,7 +4,7 @@ div[class='form_label'][for='last8']
 > : çocuklarda arama yapar
   : tüm çocuklarda(sülale) de arama yapar
 + : bitişik kardeşe gider
-~ : bütün kardeşlerde arama yapar
+~ : bütün kardeşlerde arama yapar (üveylerinput)
 
 [id^='_R_1']  -> id si _R_1 la başlayan  -> startWith
 [id$='H1_']  -> id si H1_ la biten       -> endWith
