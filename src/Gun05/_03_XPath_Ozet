@@ -1,0 +1,48 @@
+XPath avatajı
+-Görünen kelimesinden elemanı bulma
+-Geri gitme de var
+-Tüm sayafa bulduklarının 3. veya 4.cüsü locator kullanılabilir.
+
+2. Çeşit XPath var
+a) Absolute XPath
+   //html/body....
+   1- / başlıyor
+   2- En baştan html tag ile başlıyor ,tek tek gidiyor, araya bir eleman girse bozulur
+
+b) Relative XPath
+   //button[@id='form']
+   1- // başlıyor
+   2- Elemanı direkt bulur, diğeri kadar aradaki elemanlara bağımlı değildir.
+
+XPath avatajı
+-Görünen kelimesinden elemanı bulma     //*[text()="enter message"]
+-Geri gitme de var                      /..    bir üst parente gider , yukarı
+-Tüm sayafa bulduklarının 3. veya 4.cüsü locator kullanılabilir.   (//*[@class="mavi"])[2]
+
+CSS                               XPATH
+[id='msg']                       //input[@id='msg'] , input bölümü şart, istenirse * konabilir.
+[id='msg'][value='Good']         //input[@id='msg' and @value='Good']
+
+[id^='u_']                       //input[ start-with(@id,'u_') ]
+[id$='_4588']                    //input[ ends-with(@id,'_4588') ]
+[id*='4588']                     //input[ contains(@id,'4588') ]
+
+Alt elemanlardan
+>       -> çocuklar              /
+space   -> tüm çocuklar          //
++       -> bitişik kardeş        /following-sibling::
+~       -> tüm kardeşler         //following::
+
+[id='list']>:nth-child(3)        //ul[@id='list']/li[3]  -> li lerin 3.cüsü
+
+Xpath de görünen yazısında şu kısım geçen (partial link text gibi)
+//*[ contains( text(), 'Sipa' )  ]   -> elemanın görünen yazısında Sipa geçen
+
+
+
+
+
+
+
+
+
