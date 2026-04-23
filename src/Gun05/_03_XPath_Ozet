@@ -38,7 +38,7 @@ space   -> tüm çocuklar          //
 Xpath de görünen yazısında şu kısım geçen (partial link text gibi)
 //*[ contains( text(), 'Sipa' )  ]   -> elemanın görünen yazısında Sipa geçen
 
-
+By.xpath("//input[@id='user-name']")
 
 
 
