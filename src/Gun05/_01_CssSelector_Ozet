@@ -6,6 +6,10 @@ div[class='form_label'][for='last8']
 + : bitişik kardeşe gider
 ~ : bütün kardeşlerde arama yapar
 
+[id^='_R_1']  -> id si _R_1 la başlayan  -> startWith
+[id$='H1_']  -> id si H1_ la biten       -> endWith
+[id*='H1_']  -> id sinde 4ji bu geçen    -> contains
+
 
 <div id="form"> -> parent
 
