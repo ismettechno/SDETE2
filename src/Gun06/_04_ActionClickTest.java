@@ -34,7 +34,7 @@ public class _04_ActionClickTest extends BaseDriver {
         new Actions(driver).moveToElement(btnClickMe).click().build().perform(); // tek bir aksiyon
 
         // daha da kısa hali
-        new Actions(driver).click(btnClickMe).build().perform();
+        new Actions(driver).click(btnClickMe).build().perform(); // tek bir aksiyon
 
         BekleKapat();
     }
