@@ -1,0 +1,9 @@
+Interview da soruyorlar
+Action class nedir ?, nerelerde kullanılır, nasıl kullanırsın
+
+- click, yazı gönderme dışındaki olayları da kapsayan class
+
+- sağ click,double click, HoverOver, dragdrop, özel tuşlar,
+  yön tuşları bunları yapabilen sınıftır.
+
+-
