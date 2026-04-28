@@ -31,6 +31,19 @@ public class _04_DragAndDropBy extends BaseDriver {
         WebElement sagSurgu = driver.findElement(By.xpath("//div[@id='slider-range']/span[2]"));
         aksiyonDriver.dragAndDropBy(sagSurgu, -100, 0);
 
+        // ne kadar ilerletmeliyim
+        WebElement cubuk=driver.findElement(By.xpath("//div[@id='slider-range']/div[1]"));
+        int genislik= cubuk.getSize().width;
+
+//        genislik= 1000 çıktı  500 dolara eşit
+//
+//        500 1000
+//        150  x
+//
+//         x= 150*1000 / 500 = 300 birim gitmesi lazım
+
+        // TODO:  1) sol sürgü 200$ , sağ sürgüyü 400$ a getiriniz.
+        //        2) medya markette : sol sürgü : 100.000 , sağ sürgü 300.000
 
         BekleKapat();
     }
