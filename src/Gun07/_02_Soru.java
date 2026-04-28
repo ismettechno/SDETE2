@@ -24,7 +24,7 @@ public class _02_Soru extends BaseDriver {
         new Actions(driver).moveToElement(element).build().perform();
 
         WebElement pantolon= driver.findElement(By.xpath("(//*[text()='Pantolon'])[2]"));
-        pantolon.click();
+        new Actions(driver).click(pantolon).build().perform(); //pantolon.click();
         MyFunc.Bekle(2);
 
         Assert.assertTrue("Pantolon URL de bulunamadı",driver.getCurrentUrl().toLowerCase().contains("pantolon"));
