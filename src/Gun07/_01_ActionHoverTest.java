@@ -20,7 +20,4 @@ public class _01_ActionHoverTest extends BaseDriver {
 
         BekleKapat();
     }
-
-
-
 }
