@@ -1,0 +1,16 @@
+Interview da sormuşlar
+-- Alertleri nasıl kontrol edersin.
+
+driver.switchTo().alert() ->  alert kutuca geçiş yap (web sayfasından)
+
+konumtlar:
+1- .accept  : OK, TAMAM butonuna basmanızı sağlar
+2- .dismiss : CANCEL, HAYIR nutonuna basmamızı sağlıyor
+3- .sendKeys: yazı gönderme
+4- .getText : alertin yazısını(caption) alma
+
+driver.switchTo().alert().accept();
+driver.switchTo().alert().dismiss();
+driver.switchTo().alert().sendKeys();
+driver.switchTo().alert().getText();
+
