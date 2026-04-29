@@ -23,6 +23,19 @@ public class _05_Alertler extends BaseDriver {
         BekleKapat();
     }
 
+    @Test
+    public void Test2() {
+        driver.get("https://www.selenium.dev/selenium/web/alerts.html");
+        MyFunc.Bekle(2);
 
+        WebElement clickMe= driver.findElement(By.id("confirm"));
+        clickMe.click();
+        MyFunc.Bekle(2);
+        //su anda alert çıkmış oldu
+
+        driver.switchTo().alert().dismiss();  // Alertin Cancel butonuna bas
+
+        BekleKapat();
+    }
 
 }
