@@ -2,9 +2,11 @@ package Gun08;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class _05_Alertler extends BaseDriver {
 
@@ -37,6 +39,29 @@ public class _05_Alertler extends BaseDriver {
         System.out.println("icerik = " + icerik);
 
         driver.switchTo().alert().dismiss();  // Alertin Cancel butonuna bas
+
+        BekleKapat();
+    }
+
+    @Test
+    public void Test3() {
+        driver.get("https://www.selenium.dev/selenium/web/alerts.html");
+        MyFunc.Bekle(2);
+
+        WebElement clickMe= driver.findElement(By.id("prompt"));
+        clickMe.click();
+        MyFunc.Bekle(2);
+        //su anda alert çıkmış oldu
+
+        driver.switchTo().alert().sendKeys("ismet"); // alertin kutucuğuna yazı gönderildi
+        driver.switchTo().alert().accept();  // Alertin OK butonuna bas
+        MyFunc.Bekle(2);
+
+        WebElement txtMesaj=driver.findElement(By.id("text"));
+        new Actions(driver).scrollToElement(txtMesaj).build().perform();
+        // txtMesaj elementine kadar sayfayı kaydırdı
+
+        Assert.assertTrue("Mesaj bulunamadı", txtMesaj.getText().equals("ismet"));
 
         BekleKapat();
     }
