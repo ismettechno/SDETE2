@@ -33,6 +33,9 @@ public class _05_Alertler extends BaseDriver {
         MyFunc.Bekle(2);
         //su anda alert çıkmış oldu
 
+        String icerik=driver.switchTo().alert().getText(); // alertin icerik yazısı alınabilir
+        System.out.println("icerik = " + icerik);
+
         driver.switchTo().alert().dismiss();  // Alertin Cancel butonuna bas
 
         BekleKapat();
