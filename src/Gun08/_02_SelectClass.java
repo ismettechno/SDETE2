@@ -26,8 +26,8 @@ public class _02_SelectClass extends BaseDriver {
 
         //Eğer bu elemntin TAG SELECT ise
         Select menuSelect=new Select(webSelectAnaElement);
-        menuSelect.selectByVisibleText("Ev");
-//        menuSelect.selectByValue("search-alias=stripbooks");
+//        menuSelect.selectByVisibleText("Kitaplar");
+        menuSelect.selectByValue("search-alias=stripbooks");
 //        menuSelect.selectByIndex(11);
 
         for(WebElement e: menuSelect.getOptions())
