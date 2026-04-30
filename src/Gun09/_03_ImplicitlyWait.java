@@ -17,7 +17,7 @@ public class _03_ImplicitlyWait extends BaseDriver {
         WebElement btn=driver.findElement(By.xpath("//button[@onclick='timedText()']"));
         btn.click();
 
-        //MyFunc.Bekle(600);  600 dn her durumda bekler
+        //MyFunc.Bekle(600);  600 dn her durumda bekler, web tarafıyla ilgisi yok
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(600));
         //findElement için verilen mühlet, fakat locator bulunduğu anda devam eder
