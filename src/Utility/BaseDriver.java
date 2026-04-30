@@ -19,7 +19,7 @@ public class BaseDriver {
 
         driver.manage().window().maximize(); // Ekranı max yapıyor.
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30)); // 20 sn mühlet: sayfayı yükleme mühlet
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); // 5 sn mühlet: elementi bulma mühleti
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // 5 sn mühlet: elementi bulma mühleti
 
         bekle=new WebDriverWait(driver, Duration.ofSeconds(20));
     }
