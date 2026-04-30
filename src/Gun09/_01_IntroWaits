@@ -1,0 +1,24 @@
+Selenium Wait
+Elememntin HTML olması durumu var
+1-Element HTML de var, fakat görünür değil veya hala yükleniyor.
+2-Element HTML(Document Object Model) de var, görünür durumda, fakat tıklanabilir değil
+
+1- pageLoadTimeout (Sayfanın geneliyle ilgili)
+    1 kere yazılır, sayafanın yüklenmesi verilen bekleme süresidir.
+         Bu süreden yüklenmezse hata verir.Bunu kullanmazsan, sonsuza
+         kadar bekler.
+         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+            // 20 sn mühlet: sayfayı yükleme mühlet
+
+2- implicitlyWait (Web elementlere özel)
+   1. kere yazılır. Bütün elemenlar için findElement/s komutu için
+         elementin bulunması için verilen mühlet. Bu sürede bulunmazsa
+         element bulunamamış olur ve findElement hata verir,
+         findElementS için boş list döndürür.
+         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+3- ExplicitWait   (ilgili WebElement e özel yazılır)
+   Element verilen kritere uygun hale gelene kadar bekle, sadece ilgili
+         element için çalışır.sadece o anda çalışır.
+         ilgili eleman Görünür olana kadar bekle
+         ilgili eleman Tıklanabilir olana kadar bekle
