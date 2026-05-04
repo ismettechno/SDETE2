@@ -1,0 +1,21 @@
+HTML nin içinde hareket oluşturan kodlara JavaScript denir
+
+Actions driverActions=new Actions(driver);
+
+driver a , bana JavaScript çalıştırmak için, bana imkan ver.
+
+JavascriptExecutor js=(JavascriptExecutor)driver;
+js(script);  // bu script i yani komutu içerden çalıştır
+
+js.executeScript("arguments[0].click();" , element);  -> javaScript click
+
+Elemente kadar Scroll
+js.executeScript("arguments[0].scrollIntoView(true);", element);-> elemente e kadar kaydırır.
+                                                    true : element sayfanın üstünde gözükene kadar,
+                                                    false: element sayfanın altına gözükene kadar
+                                                    default true;
+
+Scroll
+js.executeScript("window.scrollTo(0,3000)"); -> Baştan Verilen pixel kadar scroll
+js.executeScript("window.scrollBy(0,3000)"); -> bulunduğu yerden pixel kadar scroll
+js.executeScript("window.scrollTo(0,document.body.scrollHeight)"); -> Sayfanın boyutu kadar kaydır
