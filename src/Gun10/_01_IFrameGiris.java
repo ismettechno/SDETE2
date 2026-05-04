@@ -11,10 +11,15 @@ public class _01_IFrameGiris extends BaseDriver {
     public void Test1() {
         driver.get("https://demo.automationtesting.in/Frames.html");
 
+        // driver.switchTo().frame(0);  // index ile geçmek sırasına göre geçilebilir
         driver.switchTo().frame("SingleFrame");
+        //index > webelement > name > id
 
         WebElement text=driver.findElement(By.xpath("//input[@type='text']"));
         text.sendKeys("merhaba");
+        // şu aşamada ben singleframe in gösterdiği sayfadayım
+        // şu anda sadece bu sayfadaki locator lara erişebilirim
+        // Ana sayfadaki veya diğer sayaflardaki lere erişmek için önce ana sayfa geçiş yapmama lazım
 
         driver.switchTo().defaultContent(); // direk ana sayfaya git
         driver.switchTo().parentFrame(); // bir geri yani parente git
