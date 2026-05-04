@@ -1,11 +1,11 @@
-package Gun09;
+package Gun10;
 
 import Utility.BaseDriver;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class _08_IFrameGiris extends BaseDriver {
+public class _01_IFrameGiris extends BaseDriver {
 
     @Test
     public void Test1() {
@@ -16,7 +16,7 @@ public class _08_IFrameGiris extends BaseDriver {
         WebElement text=driver.findElement(By.xpath("//input[@type='text']"));
         text.sendKeys("merhaba");
 
-        driver.switchTo().defaultContent(); // ana sayfaya git
+        driver.switchTo().defaultContent(); // direk ana sayfaya git
         driver.switchTo().parentFrame(); // bir geri yani parente git
 
         BekleKapat();
