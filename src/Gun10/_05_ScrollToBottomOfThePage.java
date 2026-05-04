@@ -5,7 +5,7 @@ import Utility.MyFunc;
 import org.junit.Test;
 import org.openqa.selenium.JavascriptExecutor;
 
-public class _04_Scrollintro extends BaseDriver {
+public class _05_ScrollToBottomOfThePage extends BaseDriver {
 
     @Test
     public void Test1() {
@@ -14,13 +14,10 @@ public class _04_Scrollintro extends BaseDriver {
 
         JavascriptExecutor js=(JavascriptExecutor)driver;
 
-        js.executeScript("window.scrollTo(0,1000)");  // dikey yönde 1000 pixel baştan kaydır
+        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");  // sayfanın sonuna kadar kaydır
         MyFunc.Bekle(2);
 
-        js.executeScript("window.scrollBy(0,1000)");  // dikey yönde bulunduğun yerden 1000 pixel kaydır
-        MyFunc.Bekle(2);
-
-        js.executeScript("window.scrollBy(0,-2000)");  // dikey yönde bulunduğun yerden 2000 pixel geri kaydır
+        js.executeScript("window.scrollTo(0,0)");  // sayfanın başına git
 
         BekleKapat();
     }
