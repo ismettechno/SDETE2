@@ -14,7 +14,6 @@ public class _07_JavaScriptClick extends BaseDriver {
         driver.get("https://demo.automationtesting.in/Frames.html");
         MyFunc.Bekle(2);
 
-
         WebElement ciftFrameLink= driver.findElement(By.xpath("//a[@href='#Multiple']"));
 
         JavascriptExecutor js=(JavascriptExecutor)driver;
