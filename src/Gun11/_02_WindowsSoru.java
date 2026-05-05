@@ -7,11 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
-import javax.crypto.interfaces.PBEKey;
 import java.util.List;
 import java.util.Set;
 
-public class _04_WindowsSoru extends BaseDriver {
+public class _02_WindowsSoru extends BaseDriver {
     /*
     Senaryo:
     https://www.selenium.dev/ adresindeki ayrı tab da açılan linklere tıklatınız.
@@ -32,8 +31,8 @@ public class _04_WindowsSoru extends BaseDriver {
 
         List<WebElement> linkler=driver.findElements(By.cssSelector("a[target='_blank']"));
         for (WebElement link : linkler)
-            js.executeScript("arguments[0].click();", link);
-
+            if (link.getAttribute("href").length() > 5 )
+                js.executeScript("arguments[0].click();", link);
 
         Set<String> windowsIDler=driver.getWindowHandles(); // tüm açık olan Windowların ID leri
         for(String id : windowsIDler) {
