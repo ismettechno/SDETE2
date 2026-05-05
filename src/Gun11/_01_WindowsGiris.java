@@ -23,7 +23,7 @@ public class _01_WindowsGiris extends BaseDriver {
 
         List<WebElement> linkler=driver.findElements(By.cssSelector("a[target='_blank']")); // yeni tabda açılan pencereler
         for (WebElement link : linkler)
-            js.executeScript("arguments[0].click();", link);
+            js.executeScript("arguments[0].click();", link); // link.Click();
 
         Set<String> windowsIDler=driver.getWindowHandles(); // tüm açık olan Windowların ID leri
         for(String id : windowsIDler)
