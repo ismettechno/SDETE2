@@ -7,6 +7,8 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
 public class _01_Soru extends BaseDriver {
@@ -25,8 +27,7 @@ public class _01_Soru extends BaseDriver {
 //        Bu soruda tamamen XPATH kullanılacaktır.
 
     @Test
-    public void Test1()
-    {
+    public void Test1() throws AWTException {
         driver.get("https://www.saucedemo.com/");
         MyFunc.Bekle(2);
 
@@ -42,6 +43,10 @@ public class _01_Soru extends BaseDriver {
         loginButton.click();
         MyFunc.Bekle(1);
 
+        // Ekrana çıkan chrome mesaj penceresini kapatalım
+        Robot rbt=new Robot();
+        rbt.keyPress(KeyEvent.VK_ENTER);
+        rbt.keyRelease(KeyEvent.VK_ENTER);
 
         //1.Ürün sepete ekleniyor
         MyFunc.Bekle(5);
