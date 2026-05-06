@@ -40,7 +40,7 @@ public class _02_EkranKaydet extends BaseDriver {
             FileUtils.copyFile(hafizadakiEkranGoruntusu, new File("ekranGoruntuleri/screenShot.jpg"));
         }
 
-
+        // TODO :  Öyle bir şey yapınki her ekran kaydı , AYRI AYRI kaydedilsin. 2025_03_26_13_56
 
         BekleKapat();
     }
